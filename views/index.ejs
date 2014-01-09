@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>厕所门口协作页面</title>
+<script type="text/javascript" src="/js/jquery/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="/js/note_main.js"></script>
+<style>
+.content{width: 600px; height: 500px}
+.error_res{color:red}
+.result{width:300px}
+.big_btn{height:80px;width:200px}
+</style>
+</head>
+<body>
+
+	content:
+	<br>
+	<textarea id="note_content" class="content"></textarea>
+	<br>
+	<input id="flush_btn" type="button" onclick="getText()" value="更新" class="big_btn"/>---------------
+	<input type="button" onclick="submitText()" value="提交" class="big_btn"/>
+	<input id="result" class="result"/>
+	<input id="note_version" type="hidden" value="-1"/>
+</body>
+<script>
+$(document).ready(function(){
+	getText();
+});
+</script>
+</html>
