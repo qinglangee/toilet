@@ -17,11 +17,16 @@
 	content:
 	<br>
 	<textarea id="note_content" class="content"></textarea>
+	<textarea  class="content"></textarea>
 	<br>
 	<input id="flush_btn" type="button" onclick="getText()" value="更新" class="big_btn"/>---------------
 	<input type="button" onclick="submitText()" value="提交" class="big_btn"/>
 	<input id="result" class="result"/>
 	<input id="note_version" type="hidden" value="-1"/>
+
+
+<a href="javascript:var id='木有ID';var f=$('.friend_mark');var u=$('.unfollow_mark');var fm=$('.friend_member_mark');if(f.length > 0){id=f.attr('rel')}else if(u.length>0){id=u.attr('rel')}else if(fm.length >0){id=fm.prop('rel')};alert(id)" >accountId</a>
+
 </body>
 <script>
 $(document).ready(function(){
