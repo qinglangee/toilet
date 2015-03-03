@@ -4,8 +4,8 @@
  */
 var fs = require('fs');
 
-var storeFile = '/home/lifeix/temp/noteslog/notes_store.js'
-var logFile = '/home/lifeix/temp/noteslog/notes.log'
+var storeFile = '/home/zhch/document/noteslog/notes_store.js'
+var logFile = '/home/zhch/document/noteslog/notes.log'
 exports.save = function(req, res){
 
 	var content = req.body.content;
