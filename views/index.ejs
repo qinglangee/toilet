@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <title>厕所门口协作页面</title>
 <script type="text/javascript" src="/js/jquery/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="/js/lib/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/note_main.js"></script>
 <style>
 .content{width: 600px; height: 500px}
-.editcontent{font-size:large}
+.editcontent{font-size:large;width: 600px; height: 400px}
 .error_res{color:red}
 .result{width:300px}
 .big_btn{height:80px;width:200px}
+textarea.text{width:400px;height:30px;}
 </style>
 </head>
 <body>
@@ -18,12 +20,26 @@
 	content:
 	<br>
 	<textarea id="note_content" class="content"></textarea>
-	<textarea  class="content editcontent"></textarea>
+	<textarea id="edit_content" class="editcontent"></textarea>
+    <label for="save_append">保存</label>
+    <input type="checkbox" id="save_append" value="1"/>
+    <input type="button" onclick="appendText()" value="追加" class="big_btn"/>
 	<br>
+    <h3>不是你不能，而是你对自己的要求太低！</h3>
 	<input id="flush_btn" type="button" onclick="getText()" value="更新" class="big_btn"/>---------------
 	<input type="button" onclick="submitText()" value="提交" class="big_btn"/>
 	<input id="result" class="result"/>
 	<input id="note_version" type="hidden" value="-1"/>
+    <br>
+    <!-- Target -->
+<input id="foo" value="https://github.com/zenorocha/clipboard.js.git">
+
+<!-- Trigger -->
+<button class="btn" data-clipboard-target="#foo">
+    <img src="assets/clippy.svg" alt="Copy to clipboard">
+</button>
+    <br>
+    <div id="history_box"></div>
 
 
 <a href="javascript:var id='木有ID';var f=$('.friend_mark');var u=$('.unfollow_mark');var fm=$('.friend_member_mark');if(f.length > 0){id=f.attr('rel')}else if(u.length>0){id=u.attr('rel')}else if(fm.length >0){id=fm.prop('rel')};alert(id)" >accountId</a>
