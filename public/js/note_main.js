@@ -33,8 +33,14 @@ function showHistory(his){
         var hisEle = $("<div>"
         +"<textarea class='text' id='"+id+"'></textarea>"
         +"<input type='button' class='copy_btn' onclick='copyText(this)' value='复制'"+attr+"/>"
+        +"<span><a class='link' target='blank'></a></span>"
         +"</div>");
-        $(".text", hisEle).html(his[i]);
+        var hisContent = his[i];
+        $(".text", hisEle).val(hisContent);
+        if(hisContent.indexOf("http") == 0){
+            $(".link", hisEle).attr("href", hisContent);
+            $(".link", hisEle).text("打开链接");
+        }
         box.append(hisEle);
         
         if(i>4){
