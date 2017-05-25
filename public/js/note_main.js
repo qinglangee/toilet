@@ -33,7 +33,7 @@ function showHistory(his){
         var hisEle = $("<div>"
         +"<textarea class='text' id='"+id+"'></textarea>"
         +"<input type='button' class='copy_btn' onclick='copyText(this)' value='复制'"+attr+"/>"
-        +"<span><a class='link' target='blank'></a></span>"
+        +"<span><a class='link' target='_blank'></a></span>"
         +"</div>");
         var hisContent = his[i];
         $(".text", hisEle).val(hisContent);
