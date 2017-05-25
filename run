@@ -1,2 +1,4 @@
 #! /bin/bash
+echo 123
 nohup node app.js &
+
